@@ -1,0 +1,41 @@
+#root {width: 100%}
+.mainStyles {
+  height: 250px;
+  opacity: 0;
+  background-color: red;
+}
+  
+.openAnimation {
+  animation: open-menu .4s linear forwards;
+}
+  
+.closeAnimation {
+  animation: close-menu .4s linear forwards;
+}
+  
+@keyframes open-menu {
+  0% {
+      opacity: 0;
+      height: 0;
+      /* transform: translateY(0); */
+  } /*You can use animation what do You need*/
+  100% {
+      opacity: 1;
+      height: 250px;
+      transform: translateY(0);
+  }
+}
+  
+@keyframes close-menu {
+  0% {
+      opacity: 1;
+      height: 250px;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      height: 0;
+      /* transform: translateY(0); */
+  }
+}
+  

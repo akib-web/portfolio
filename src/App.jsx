@@ -1,18 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import ChitChat from './tailwind-templates/ChitChat'
-import Default from './components/Default'
-import Nav from './tailwind-templates/Nav'
+import { useEffect, useState } from 'react'
+// import './App.css'
+import '../src/assets/css/style.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Nav from './components/Nav';
+import Skills from './components/Skills';
+import Services from './components/Services';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+  //useEffect
+  useEffect(() => {
+    AOS.init({
+      duration: 1800,
+      offset: 100,
+      disable: "mobile",
+    });
+    // AOS.refresh();
+  }, []);
 
   return (
-    <div className="App">
+    <div className="">
       <Nav />
-      <ChitChat />
-      
+      <Hero />
+      <About/>
+      <Skills/>
+      <Services />
+      <Projects />
+      <Contact />
     </div>
   )
 }
